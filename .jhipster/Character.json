@@ -1,0 +1,145 @@
+{
+    "name": "Character",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "level",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "experience",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "maxHitpoints",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "currentHitpoints",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "gold",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "strength",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "agility",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "constituition",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "intelligence",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "willpower",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "charisma",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "character",
+            "relationshipName": "skill",
+            "otherEntityName": "skill",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "character",
+            "relationshipName": "game",
+            "otherEntityName": "game",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "character",
+            "relationshipName": "status",
+            "otherEntityName": "status",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "character",
+            "relationshipName": "item",
+            "otherEntityName": "item",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "profession",
+            "otherEntityName": "profession",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "helmet",
+            "otherEntityName": "helmet",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "armour",
+            "otherEntityName": "armour",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "boots",
+            "otherEntityName": "boots",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "gloves",
+            "otherEntityName": "gloves",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "legs",
+            "otherEntityName": "legs",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "rightHand",
+            "otherEntityName": "rightHand",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "leftHand",
+            "otherEntityName": "leftHand",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181121211715",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "character",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

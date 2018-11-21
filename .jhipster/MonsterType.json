@@ -1,0 +1,62 @@
+{
+    "name": "MonsterType",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "strength",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "agility",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "constituition",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "intelligence",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "willpower",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "charisma",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "hitpoints",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "attack",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "defense",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "monster",
+            "otherEntityName": "monster",
+            "otherEntityRelationshipName": "type"
+        }
+    ],
+    "changelogDate": "20181121211723",
+    "entityTableName": "monster_type",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

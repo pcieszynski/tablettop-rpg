@@ -1,0 +1,55 @@
+{
+    "name": "Event",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "npc",
+            "otherEntityName": "npc",
+            "otherEntityRelationshipName": "event"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "battle",
+            "otherEntityName": "battle",
+            "otherEntityRelationshipName": "event"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "playerMessage",
+            "otherEntityName": "playerMessage",
+            "otherEntityRelationshipName": "event"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "game",
+            "otherEntityName": "game",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "shop",
+            "otherEntityName": "shop",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181121211719",
+    "entityTableName": "event",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

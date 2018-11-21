@@ -1,0 +1,53 @@
+{
+    "name": "PlayerMessage",
+    "fields": [
+        {
+            "fieldName": "message",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "attack",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "heal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "difficulty",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "success",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "attribute",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "player",
+            "otherEntityName": "player",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "event",
+            "otherEntityName": "event",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181121211720",
+    "entityTableName": "player_message",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

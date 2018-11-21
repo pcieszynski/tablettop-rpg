@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Battle.
+    -->
+    <changeSet id="20181121211721-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="battles_id"
+                                 baseTableName="battle_monster"
+                                 constraintName="fk_battle_monster_battles_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="battle"/>
+        <addForeignKeyConstraint baseColumnNames="monsters_id"
+                                 baseTableName="battle_monster"
+                                 constraintName="fk_battle_monster_monsters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="monster"/>
+        
+        <addForeignKeyConstraint baseColumnNames="event_id"
+                                 baseTableName="battle"
+                                 constraintName="fk_battle_event_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="event"/>
+
+    </changeSet>
+</databaseChangeLog>

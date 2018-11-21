@@ -1,0 +1,51 @@
+{
+    "name": "Skill",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "damage",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "heal",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "level",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "profession",
+            "otherEntityName": "profession",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "skill"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "character",
+            "otherEntityName": "character",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "skill"
+        }
+    ],
+    "changelogDate": "20181121211717",
+    "entityTableName": "skill",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

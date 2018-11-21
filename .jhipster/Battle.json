@@ -1,0 +1,38 @@
+{
+    "name": "Battle",
+    "fields": [
+        {
+            "fieldName": "monster",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "monsterNumber",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "battle",
+            "relationshipName": "monster",
+            "otherEntityName": "monster",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "event",
+            "otherEntityName": "event",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181121211721",
+    "entityTableName": "battle",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
