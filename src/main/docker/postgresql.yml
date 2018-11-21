@@ -1,0 +1,11 @@
+version: '2'
+services:
+    tablettoprpg-postgresql:
+        image: postgres:10.4
+        # volumes:
+        #     - ~/volumes/jhipster/TabletTopRPG/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=TabletTopRPG
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
