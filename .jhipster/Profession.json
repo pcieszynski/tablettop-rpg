@@ -1,0 +1,58 @@
+{
+    "name": "Profession",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "strengthModifier",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "agilityModifier",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "constituitionModifier",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "intelligenceModifier",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "willpowerModifier",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "charismaModifier",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "character",
+            "otherEntityName": "character",
+            "otherEntityRelationshipName": "profession"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "profession",
+            "relationshipName": "skill",
+            "otherEntityName": "skill",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20181121211716",
+    "entityTableName": "profession",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

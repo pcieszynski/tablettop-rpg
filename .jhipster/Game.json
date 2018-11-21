@@ -1,0 +1,51 @@
+{
+    "name": "Game",
+    "fields": [
+        {
+            "fieldName": "currentEvent",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "currentPlayer",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "event",
+            "otherEntityName": "event",
+            "otherEntityRelationshipName": "game"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "game",
+            "relationshipName": "player",
+            "otherEntityName": "player",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "gamemaster",
+            "otherEntityName": "gamemaster",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "character",
+            "otherEntityName": "character",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "game"
+        }
+    ],
+    "changelogDate": "20181121211714",
+    "entityTableName": "game",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

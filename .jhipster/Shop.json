@@ -1,0 +1,87 @@
+{
+    "name": "Shop",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isLoot",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "event",
+            "otherEntityName": "event",
+            "otherEntityRelationshipName": "shop"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "shop",
+            "relationshipName": "item",
+            "otherEntityName": "item",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "helmet",
+            "otherEntityName": "helmet",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "shop"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "armour",
+            "otherEntityName": "armour",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "shop"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "boots",
+            "otherEntityName": "boots",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "shop"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "gloves",
+            "otherEntityName": "gloves",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "shop"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "legs",
+            "otherEntityName": "legs",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "shop"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "rightHand",
+            "otherEntityName": "rightHand",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "shop"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "leftHand",
+            "otherEntityName": "leftHand",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "shop"
+        }
+    ],
+    "changelogDate": "20181121211725",
+    "entityTableName": "shop",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

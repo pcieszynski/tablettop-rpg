@@ -1,0 +1,214 @@
+
+
+
+
+entity Player {
+    username String,
+    keycloakId String
+}
+
+entity Gamemaster {
+	
+}
+
+
+entity Game {
+    currentEvent Long,
+    currentPlayer String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Character {
+	name String,
+	level Integer,
+	experience Integer,
+    maxHitpoints Integer,
+    currentHitpoints Integer,
+    gold Integer,
+    strength Integer,
+    agility Integer,
+    constituition Integer,
+    intelligence Integer,
+    willpower Integer,
+    charisma Integer	
+}
+
+entity Profession {
+	name String,
+    strengthModifier Integer,
+    agilityModifier Integer,
+    constituitionModifier Integer,
+    intelligenceModifier Integer,
+    willpowerModifier Integer,
+    charismaModifier Integer
+}
+
+entity Skill {
+	name String,
+    description TextBlob,
+    damage String,
+    heal Integer,
+    level Integer
+}
+
+entity Status {
+	name String,
+    effect String
+}
+
+entity Event {
+	name String,
+    description TextBlob
+}
+
+entity PlayerMessage{
+	message TextBlob,
+    attack String,
+    heal Integer,
+    difficulty Integer,
+    success Boolean,
+    attribute String
+}
+
+entity Battle {
+	monster String,
+    monsterNumber Integer
+}
+
+entity Monster {
+	currentHP Integer
+}
+
+entity MonsterType {
+	name String,
+    strength Integer,
+    agility Integer,
+    constituition Integer,
+    intelligence Integer,
+    willpower Integer,
+    charisma Integer
+    hitpoints Integer,
+    attack String,
+    defense Integer    
+}
+
+entity Npc {
+	name String
+}
+
+entity Shop {
+	name String,
+    isLoot Boolean,
+}
+
+entity Item {
+	name String,
+    effect String,
+    price Integer
+}
+
+entity Armour {
+	name String,
+    effect String,
+    price Integer,
+    defence Integer,
+    part String
+}
+
+entity Boots {
+	name String,
+    effect String,
+    price Integer,
+    defence Integer,
+    part String
+}
+
+entity Legs {
+	name String,
+    effect String,
+    price Integer,
+    defence Integer,
+    part String
+}
+
+entity Helmet {
+	name String,
+    effect String,
+    price Integer,
+    defence Integer,
+    part String
+}
+
+entity Gloves {
+	name String,
+    effect String,
+    price Integer,
+    defence Integer,
+    part String
+}
+
+entity RightHand {
+	name String,
+    effect String,
+    price Integer,
+    attack String,
+    defense Integer,
+    type String
+}
+
+entity LeftHand {
+	name String,
+    effect String,
+    price Integer,
+    attack String,
+    defense Integer,
+    type String
+}
+
+
+relationship OneToMany {
+	Gamemaster to Game{gamemaster},
+    Player to Gamemaster{player}
+    Profession to Character{profession},
+    Helmet to Character{helmet},
+    Armour to Character{armour},
+    Boots to Character{boots},
+    Gloves to Character{gloves} ,
+    Legs to Character{legs},
+    RightHand to Character{rightHand},
+    LeftHand to Character{leftHand},
+    Player to PlayerMessage{player},
+    Event to Npc{event},
+    Game to Event{game},
+    Event to Battle{event} ,
+    MonsterType to Monster{type},
+    Shop to Event{shop},
+    Event to PlayerMessage{event}
+}
+
+relationship ManyToMany {
+	Game{player} to Player{game},
+    Profession{skill} to Skill{profession},
+    Character{skill} to Skill{character},
+    Character{game} to Game{character},
+    Character{status} to Status{character},
+    Shop{item} to Item{shop},
+    Character{item} to Item{character},
+    Battle{monster} to Monster{battle},    
+    Helmet{shop} to Shop{helmet},
+    Armour{shop} to Shop{armour},
+    Boots{shop} to Shop{boots},
+    Gloves{shop} to Shop{gloves} ,
+    Legs{shop} to Shop{legs},
+    RightHand{shop} to Shop{rightHand},
+    LeftHand{shop} to Shop{leftHand}  
+}
+//Use Data Transfert Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

@@ -1,0 +1,33 @@
+{
+    "name": "Monster",
+    "fields": [
+        {
+            "fieldName": "currentHP",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "type",
+            "otherEntityName": "monsterType",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "battle",
+            "otherEntityName": "battle",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "monster"
+        }
+    ],
+    "changelogDate": "20181121211722",
+    "entityTableName": "monster",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

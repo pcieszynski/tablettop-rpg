@@ -1,0 +1,50 @@
+{
+    "name": "Boots",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "effect",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "defence",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "part",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "character",
+            "otherEntityName": "character",
+            "otherEntityRelationshipName": "boots"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "boots",
+            "relationshipName": "shop",
+            "otherEntityName": "shop",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20181121211728",
+    "entityTableName": "boots",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

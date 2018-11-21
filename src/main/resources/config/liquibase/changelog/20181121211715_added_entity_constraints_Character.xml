@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Character.
+    -->
+    <changeSet id="20181121211715-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="characters_id"
+                                 baseTableName="character_skill"
+                                 constraintName="fk_character_skill_characters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="character"/>
+        <addForeignKeyConstraint baseColumnNames="skills_id"
+                                 baseTableName="character_skill"
+                                 constraintName="fk_character_skill_skills_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="skill"/>
+        
+        <addForeignKeyConstraint baseColumnNames="characters_id"
+                                 baseTableName="character_game"
+                                 constraintName="fk_character_game_characters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="character"/>
+        <addForeignKeyConstraint baseColumnNames="games_id"
+                                 baseTableName="character_game"
+                                 constraintName="fk_character_game_games_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="game"/>
+        
+        <addForeignKeyConstraint baseColumnNames="characters_id"
+                                 baseTableName="character_status"
+                                 constraintName="fk_character_status_characters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="character"/>
+        <addForeignKeyConstraint baseColumnNames="statuses_id"
+                                 baseTableName="character_status"
+                                 constraintName="fk_character_status_statuses_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="status"/>
+        
+        <addForeignKeyConstraint baseColumnNames="characters_id"
+                                 baseTableName="character_item"
+                                 constraintName="fk_character_item_characters_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="character"/>
+        <addForeignKeyConstraint baseColumnNames="items_id"
+                                 baseTableName="character_item"
+                                 constraintName="fk_character_item_items_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="item"/>
+        
+        <addForeignKeyConstraint baseColumnNames="profession_id"
+                                 baseTableName="character"
+                                 constraintName="fk_character_profession_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profession"/>
+
+        <addForeignKeyConstraint baseColumnNames="helmet_id"
+                                 baseTableName="character"
+                                 constraintName="fk_character_helmet_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="helmet"/>
+
+        <addForeignKeyConstraint baseColumnNames="armour_id"
+                                 baseTableName="character"
+                                 constraintName="fk_character_armour_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="armour"/>
+
+        <addForeignKeyConstraint baseColumnNames="boots_id"
+                                 baseTableName="character"
+                                 constraintName="fk_character_boots_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="boots"/>
+
+        <addForeignKeyConstraint baseColumnNames="gloves_id"
+                                 baseTableName="character"
+                                 constraintName="fk_character_gloves_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="gloves"/>
+
+        <addForeignKeyConstraint baseColumnNames="legs_id"
+                                 baseTableName="character"
+                                 constraintName="fk_character_legs_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="legs"/>
+
+        <addForeignKeyConstraint baseColumnNames="right_hand_id"
+                                 baseTableName="character"
+                                 constraintName="fk_character_right_hand_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="right_hand"/>
+
+        <addForeignKeyConstraint baseColumnNames="left_hand_id"
+                                 baseTableName="character"
+                                 constraintName="fk_character_left_hand_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="left_hand"/>
+
+    </changeSet>
+</databaseChangeLog>

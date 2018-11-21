@@ -1,0 +1,31 @@
+{
+    "name": "Status",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "effect",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "character",
+            "otherEntityName": "character",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "status"
+        }
+    ],
+    "changelogDate": "20181121211718",
+    "entityTableName": "status",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

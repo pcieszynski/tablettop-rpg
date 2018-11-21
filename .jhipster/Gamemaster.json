@@ -1,0 +1,27 @@
+{
+    "name": "Gamemaster",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "game",
+            "otherEntityName": "game",
+            "otherEntityRelationshipName": "gamemaster"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "player",
+            "otherEntityName": "player",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181121211713",
+    "entityTableName": "gamemaster",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

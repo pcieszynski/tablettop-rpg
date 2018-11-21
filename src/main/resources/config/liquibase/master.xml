@@ -5,6 +5,45 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211712_added_entity_Player.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211713_added_entity_Gamemaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211714_added_entity_Game.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211715_added_entity_Character.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211716_added_entity_Profession.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211717_added_entity_Skill.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211718_added_entity_Status.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211719_added_entity_Event.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211720_added_entity_PlayerMessage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211721_added_entity_Battle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211722_added_entity_Monster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211723_added_entity_MonsterType.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211724_added_entity_Npc.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211725_added_entity_Shop.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211726_added_entity_Item.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211727_added_entity_Armour.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211728_added_entity_Boots.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211729_added_entity_Legs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211730_added_entity_Helmet.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211731_added_entity_Gloves.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211732_added_entity_RightHand.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211733_added_entity_LeftHand.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20181121211713_added_entity_constraints_Gamemaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211714_added_entity_constraints_Game.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211715_added_entity_constraints_Character.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211716_added_entity_constraints_Profession.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211719_added_entity_constraints_Event.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211720_added_entity_constraints_PlayerMessage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211721_added_entity_constraints_Battle.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211722_added_entity_constraints_Monster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211724_added_entity_constraints_Npc.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211725_added_entity_constraints_Shop.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211727_added_entity_constraints_Armour.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211728_added_entity_constraints_Boots.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211729_added_entity_constraints_Legs.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211730_added_entity_constraints_Helmet.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211731_added_entity_constraints_Gloves.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211732_added_entity_constraints_RightHand.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181121211733_added_entity_constraints_LeftHand.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

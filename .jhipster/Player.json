@@ -1,0 +1,43 @@
+{
+    "name": "Player",
+    "fields": [
+        {
+            "fieldName": "username",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "keycloakId",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "gamemaster",
+            "otherEntityName": "gamemaster",
+            "otherEntityRelationshipName": "player"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "playerMessage",
+            "otherEntityName": "playerMessage",
+            "otherEntityRelationshipName": "player"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "game",
+            "otherEntityName": "game",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "player"
+        }
+    ],
+    "changelogDate": "20181121211712",
+    "entityTableName": "player",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

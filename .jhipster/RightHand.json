@@ -1,0 +1,54 @@
+{
+    "name": "RightHand",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "effect",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "attack",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "defense",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "character",
+            "otherEntityName": "character",
+            "otherEntityRelationshipName": "rightHand"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "rightHand",
+            "relationshipName": "shop",
+            "otherEntityName": "shop",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20181121211732",
+    "entityTableName": "right_hand",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
