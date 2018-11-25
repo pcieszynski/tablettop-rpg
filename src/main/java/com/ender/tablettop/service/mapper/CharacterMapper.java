@@ -1,6 +1,7 @@
 package com.ender.tablettop.service.mapper;
 
 import com.ender.tablettop.domain.*;
+import com.ender.tablettop.domain.Character;
 import com.ender.tablettop.service.dto.CharacterDTO;
 
 import org.mapstruct.*;

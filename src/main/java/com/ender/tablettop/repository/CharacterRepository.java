@@ -1,6 +1,7 @@
 package com.ender.tablettop.repository;
 
 import com.ender.tablettop.domain.Character;
+import com.ender.tablettop.service.dto.CharacterDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.*;
@@ -27,4 +28,6 @@ public interface CharacterRepository extends JpaRepository<Character, Long> {
     @Query("select character from Character character left join fetch character.skills left join fetch character.games left join fetch character.statuses left join fetch character.items where character.id =:id")
     Optional<Character> findOneWithEagerRelationships(@Param("id") Long id);
 
+    @Query("select character from Character character where ")
+    CharacterDTO findByPlayerIdAndGameId(String playerId, String gameId);
 }

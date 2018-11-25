@@ -1,5 +1,7 @@
 package com.ender.tablettop.service.dto;
 
+import com.ender.tablettop.domain.Profession;
+
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -44,21 +46,21 @@ public class CharacterDTO implements Serializable {
 
     private Set<ItemDTO> items = new HashSet<>();
 
-    private Long professionId;
+    private ProfessionDTO professionId;
 
-    private Long helmetId;
+    private HelmetDTO helmetId;
 
-    private Long armourId;
+    private ArmourDTO armourId;
 
-    private Long bootsId;
+    private BootsDTO bootsId;
 
-    private Long glovesId;
+    private GlovesDTO glovesId;
 
-    private Long legsId;
+    private LegsDTO legsId;
 
-    private Long rightHandId;
+    private RightHandDTO rightHandId;
 
-    private Long leftHandId;
+    private RightHandDTO leftHandId;
 
     public Long getId() {
         return id;
@@ -196,67 +198,67 @@ public class CharacterDTO implements Serializable {
         this.items = items;
     }
 
-    public Long getProfessionId() {
+    public ProfessionDTO getProfessionId() {
         return professionId;
     }
 
-    public void setProfessionId(Long professionId) {
+    public void setProfessionId(ProfessionDTO professionId) {
         this.professionId = professionId;
     }
 
-    public Long getHelmetId() {
+    public HelmetDTO getHelmetId() {
         return helmetId;
     }
 
-    public void setHelmetId(Long helmetId) {
+    public void setHelmetId(HelmetDTO helmetId) {
         this.helmetId = helmetId;
     }
 
-    public Long getArmourId() {
+    public ArmourDTO getArmourId() {
         return armourId;
     }
 
-    public void setArmourId(Long armourId) {
+    public void setArmourId(ArmourDTO armourId) {
         this.armourId = armourId;
     }
 
-    public Long getBootsId() {
+    public BootsDTO getBootsId() {
         return bootsId;
     }
 
-    public void setBootsId(Long bootsId) {
+    public void setBootsId(BootsDTO bootsId) {
         this.bootsId = bootsId;
     }
 
-    public Long getGlovesId() {
+    public GlovesDTO getGlovesId() {
         return glovesId;
     }
 
-    public void setGlovesId(Long glovesId) {
+    public void setGlovesId(GlovesDTO glovesId) {
         this.glovesId = glovesId;
     }
 
-    public Long getLegsId() {
+    public LegsDTO getLegsId() {
         return legsId;
     }
 
-    public void setLegsId(Long legsId) {
+    public void setLegsId(LegsDTO legsId) {
         this.legsId = legsId;
     }
 
-    public Long getRightHandId() {
+    public RightHandDTO getRightHandId() {
         return rightHandId;
     }
 
-    public void setRightHandId(Long rightHandId) {
+    public void setRightHandId(RightHandDTO rightHandId) {
         this.rightHandId = rightHandId;
     }
 
-    public Long getLeftHandId() {
+    public RightHandDTO getLeftHandId() {
         return leftHandId;
     }
 
-    public void setLeftHandId(Long leftHandId) {
+    public void setLeftHandId(RightHandDTO leftHandId) {
         this.leftHandId = leftHandId;
     }
 
@@ -284,27 +286,31 @@ public class CharacterDTO implements Serializable {
     @Override
     public String toString() {
         return "CharacterDTO{" +
-            "id=" + getId() +
-            ", name='" + getName() + "'" +
-            ", level=" + getLevel() +
-            ", experience=" + getExperience() +
-            ", maxHitpoints=" + getMaxHitpoints() +
-            ", currentHitpoints=" + getCurrentHitpoints() +
-            ", gold=" + getGold() +
-            ", strength=" + getStrength() +
-            ", agility=" + getAgility() +
-            ", constituition=" + getConstituition() +
-            ", intelligence=" + getIntelligence() +
-            ", willpower=" + getWillpower() +
-            ", charisma=" + getCharisma() +
-            ", profession=" + getProfessionId() +
-            ", helmet=" + getHelmetId() +
-            ", armour=" + getArmourId() +
-            ", boots=" + getBootsId() +
-            ", gloves=" + getGlovesId() +
-            ", legs=" + getLegsId() +
-            ", rightHand=" + getRightHandId() +
-            ", leftHand=" + getLeftHandId() +
-            "}";
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", level=" + level +
+            ", experience=" + experience +
+            ", maxHitpoints=" + maxHitpoints +
+            ", currentHitpoints=" + currentHitpoints +
+            ", gold=" + gold +
+            ", strength=" + strength +
+            ", agility=" + agility +
+            ", constituition=" + constituition +
+            ", intelligence=" + intelligence +
+            ", willpower=" + willpower +
+            ", charisma=" + charisma +
+            ", skills=" + skills +
+            ", games=" + games +
+            ", statuses=" + statuses +
+            ", items=" + items +
+            ", professionId=" + professionId +
+            ", helmetId=" + helmetId +
+            ", armourId=" + armourId +
+            ", bootsId=" + bootsId +
+            ", glovesId=" + glovesId +
+            ", legsId=" + legsId +
+            ", rightHandId=" + rightHandId +
+            ", leftHandId=" + leftHandId +
+            '}';
     }
 }

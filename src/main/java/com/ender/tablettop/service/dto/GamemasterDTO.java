@@ -10,7 +10,7 @@ public class GamemasterDTO implements Serializable {
 
     private Long id;
 
-    private Long playerId;
+    private PlayerDTO playerId;
 
     public Long getId() {
         return id;
@@ -20,11 +20,11 @@ public class GamemasterDTO implements Serializable {
         this.id = id;
     }
 
-    public Long getPlayerId() {
+    public PlayerDTO getPlayerId() {
         return playerId;
     }
 
-    public void setPlayerId(Long playerId) {
+    public void setPlayerId(PlayerDTO playerId) {
         this.playerId = playerId;
     }
 

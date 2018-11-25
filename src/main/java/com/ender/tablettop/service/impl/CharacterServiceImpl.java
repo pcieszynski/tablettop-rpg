@@ -73,7 +73,7 @@ public class CharacterServiceImpl implements CharacterService {
     public Page<CharacterDTO> findAllWithEagerRelationships(Pageable pageable) {
         return characterRepository.findAllWithEagerRelationships(pageable).map(characterMapper::toDto);
     }
-    
+
 
     /**
      * Get one character by id.
@@ -98,5 +98,10 @@ public class CharacterServiceImpl implements CharacterService {
     public void delete(Long id) {
         log.debug("Request to delete Character : {}", id);
         characterRepository.deleteById(id);
+    }
+
+    @Override
+    public CharacterDTO findCharacterByPlayerIdAndGameId(String playerId, String gameId) {
+        return characterRepository.findByPlayerIdAndGameId(playerId,gameId);
     }
 }

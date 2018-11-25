@@ -44,9 +44,9 @@ spring:
             indent-output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:postgresql://localhost:5432/TabletTopRPG
-        username: TabletTopRPG
-        password:
+        url: jdbc:postgresql://localhost:5432/tablettop
+        username: postgres
+        password: qwerty.1
         hikari:
             auto-commit: false
     jpa:

@@ -89,6 +89,13 @@ public class CharacterResource {
         return characterService.findAll();
     }
 
+    @GetMapping("/characters/playerid/{playerId}/game/{gameId}")
+    @Timed
+    public CharacterDTO getCharacterByPlayerIdAndGameId(@PathVariable String playerId, @PathVariable String gameId) {
+        log.debug("REST request to get all Characters");
+        return characterService.findCharacterByPlayerIdAndGameId(playerId,gameId);
+    }
+
     /**
      * GET  /characters/:id : get the "id" character.
      *
