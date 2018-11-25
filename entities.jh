@@ -171,6 +171,7 @@ relationship OneToMany {
 	Gamemaster to Game{gamemaster},
     Player to Gamemaster{player}
     Profession to Character{profession},
+    Player to Character{player},
     Helmet to Character{helmet},
     Armour to Character{armour},
     Boots to Character{boots},
