@@ -19,6 +19,12 @@
         },
         {
             "relationshipType": "one-to-many",
+            "relationshipName": "character",
+            "otherEntityName": "character",
+            "otherEntityRelationshipName": "player"
+        },
+        {
+            "relationshipType": "one-to-many",
             "relationshipName": "playerMessage",
             "otherEntityName": "playerMessage",
             "otherEntityRelationshipName": "player"

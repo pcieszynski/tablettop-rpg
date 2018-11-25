@@ -91,6 +91,10 @@ public class Character implements Serializable {
 
     @ManyToOne
     @JsonIgnoreProperties("characters")
+    private Player player;
+
+    @ManyToOne
+    @JsonIgnoreProperties("characters")
     private Helmet helmet;
 
     @ManyToOne
@@ -393,6 +397,19 @@ public class Character implements Serializable {
 
     public void setProfession(Profession profession) {
         this.profession = profession;
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public Character player(Player player) {
+        this.player = player;
+        return this;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
     }
 
     public Helmet getHelmet() {

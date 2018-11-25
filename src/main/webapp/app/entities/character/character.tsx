@@ -51,6 +51,7 @@ export class Character extends React.Component<ICharacterProps> {
                 <th>Status</th>
                 <th>Item</th>
                 <th>Profession</th>
+                <th>Player</th>
                 <th>Helmet</th>
                 <th>Armour</th>
                 <th>Boots</th>
@@ -122,6 +123,7 @@ export class Character extends React.Component<ICharacterProps> {
                       : null}
                   </td>
                   <td>{character.professionId ? <Link to={`profession/${character.professionId}`}>{character.professionId}</Link> : ''}</td>
+                  <td>{character.playerId ? <Link to={`player/${character.playerId}`}>{character.playerId}</Link> : ''}</td>
                   <td>{character.helmetId ? <Link to={`helmet/${character.helmetId}`}>{character.helmetId}</Link> : ''}</td>
                   <td>{character.armourId ? <Link to={`armour/${character.armourId}`}>{character.armourId}</Link> : ''}</td>
                   <td>{character.bootsId ? <Link to={`boots/${character.bootsId}`}>{character.bootsId}</Link> : ''}</td>

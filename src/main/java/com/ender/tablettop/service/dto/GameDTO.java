@@ -18,7 +18,7 @@ public class GameDTO implements Serializable {
 
     private Set<PlayerDTO> players = new HashSet<>();
 
-    private GamemasterDTO gamemasterId;
+    private Long gamemasterId;
 
     public Long getId() {
         return id;
@@ -52,11 +52,11 @@ public class GameDTO implements Serializable {
         this.players = players;
     }
 
-    public GamemasterDTO getGamemasterId() {
+    public Long getGamemasterId() {
         return gamemasterId;
     }
 
-    public void setGamemasterId(GamemasterDTO gamemasterId) {
+    public void setGamemasterId(Long gamemasterId) {
         this.gamemasterId = gamemasterId;
     }
 
