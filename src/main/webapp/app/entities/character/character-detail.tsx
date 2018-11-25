@@ -122,6 +122,8 @@ export class CharacterDetail extends React.Component<ICharacterDetailProps> {
             </dd>
             <dt>Profession</dt>
             <dd>{characterEntity.professionId ? characterEntity.professionId : ''}</dd>
+            <dt>Player</dt>
+            <dd>{characterEntity.playerId ? characterEntity.playerId : ''}</dd>
             <dt>Helmet</dt>
             <dd>{characterEntity.helmetId ? characterEntity.helmetId : ''}</dd>
             <dt>Armour</dt>

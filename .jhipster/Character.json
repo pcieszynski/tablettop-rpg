@@ -91,6 +91,12 @@
         },
         {
             "relationshipType": "many-to-one",
+            "relationshipName": "player",
+            "otherEntityName": "player",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
             "relationshipName": "helmet",
             "otherEntityName": "helmet",
             "otherEntityField": "id"

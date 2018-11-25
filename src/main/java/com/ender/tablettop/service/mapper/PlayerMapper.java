@@ -13,6 +13,7 @@ public interface PlayerMapper extends EntityMapper<PlayerDTO, Player> {
 
 
     @Mapping(target = "gamemasters", ignore = true)
+    @Mapping(target = "characters", ignore = true)
     @Mapping(target = "playerMessages", ignore = true)
     @Mapping(target = "games", ignore = true)
     Player toEntity(PlayerDTO playerDTO);

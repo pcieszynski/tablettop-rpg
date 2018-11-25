@@ -18,6 +18,8 @@ import { IItem } from 'app/shared/model/item.model';
 import { getEntities as getItems } from 'app/entities/item/item.reducer';
 import { IProfession } from 'app/shared/model/profession.model';
 import { getEntities as getProfessions } from 'app/entities/profession/profession.reducer';
+import { IPlayer } from 'app/shared/model/player.model';
+import { getEntities as getPlayers } from 'app/entities/player/player.reducer';
 import { IHelmet } from 'app/shared/model/helmet.model';
 import { getEntities as getHelmets } from 'app/entities/helmet/helmet.reducer';
 import { IArmour } from 'app/shared/model/armour.model';
@@ -47,6 +49,7 @@ export interface ICharacterUpdateState {
   idsstatus: any[];
   idsitem: any[];
   professionId: string;
+  playerId: string;
   helmetId: string;
   armourId: string;
   bootsId: string;
@@ -65,6 +68,7 @@ export class CharacterUpdate extends React.Component<ICharacterUpdateProps, ICha
       idsstatus: [],
       idsitem: [],
       professionId: '0',
+      playerId: '0',
       helmetId: '0',
       armourId: '0',
       bootsId: '0',
@@ -94,6 +98,7 @@ export class CharacterUpdate extends React.Component<ICharacterUpdateProps, ICha
     this.props.getStatuses();
     this.props.getItems();
     this.props.getProfessions();
+    this.props.getPlayers();
     this.props.getHelmets();
     this.props.getArmours();
     this.props.getBoots();
@@ -135,6 +140,7 @@ export class CharacterUpdate extends React.Component<ICharacterUpdateProps, ICha
       statuses,
       items,
       professions,
+      players,
       helmets,
       armours,
       boots,
@@ -332,6 +338,19 @@ export class CharacterUpdate extends React.Component<ICharacterUpdateProps, ICha
                   </AvInput>
                 </AvGroup>
                 <AvGroup>
+                  <Label for="player.id">Player</Label>
+                  <AvInput id="character-player" type="select" className="form-control" name="playerId">
+                    <option value="" key="0" />
+                    {players
+                      ? players.map(otherEntity => (
+                          <option value={otherEntity.id} key={otherEntity.id}>
+                            {otherEntity.id}
+                          </option>
+                        ))
+                      : null}
+                  </AvInput>
+                </AvGroup>
+                <AvGroup>
                   <Label for="helmet.id">Helmet</Label>
                   <AvInput id="character-helmet" type="select" className="form-control" name="helmetId">
                     <option value="" key="0" />
@@ -445,6 +464,7 @@ const mapStateToProps = (storeState: IRootState) => ({
   statuses: storeState.status.entities,
   items: storeState.item.entities,
   professions: storeState.profession.entities,
+  players: storeState.player.entities,
   helmets: storeState.helmet.entities,
   armours: storeState.armour.entities,
   boots: storeState.boots.entities,
@@ -464,6 +484,7 @@ const mapDispatchToProps = {
   getStatuses,
   getItems,
   getProfessions,
+  getPlayers,
   getHelmets,
   getArmours,
   getBoots,
