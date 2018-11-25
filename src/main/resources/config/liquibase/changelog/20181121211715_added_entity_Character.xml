@@ -73,6 +73,10 @@
                 <constraints nullable="true" />
             </column>
 
+            <column name="player_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
             <column name="helmet_id" type="bigint">
                 <constraints nullable="true" />
             </column>

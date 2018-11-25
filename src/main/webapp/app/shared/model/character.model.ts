@@ -22,6 +22,7 @@ export interface ICharacter {
   statuses?: IStatus[];
   items?: IItem[];
   professionId?: number;
+  playerId?: number;
   helmetId?: number;
   armourId?: number;
   bootsId?: number;

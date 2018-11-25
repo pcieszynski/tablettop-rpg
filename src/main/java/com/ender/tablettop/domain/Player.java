@@ -32,6 +32,8 @@ public class Player implements Serializable {
     @OneToMany(mappedBy = "player")
     private Set<Gamemaster> gamemasters = new HashSet<>();
     @OneToMany(mappedBy = "player")
+    private Set<Character> characters = new HashSet<>();
+    @OneToMany(mappedBy = "player")
     private Set<PlayerMessage> playerMessages = new HashSet<>();
     @ManyToMany(mappedBy = "players")
     @JsonIgnore
@@ -95,6 +97,31 @@ public class Player implements Serializable {
 
     public void setGamemasters(Set<Gamemaster> gamemasters) {
         this.gamemasters = gamemasters;
+    }
+
+    public Set<Character> getCharacters() {
+        return characters;
+    }
+
+    public Player characters(Set<Character> characters) {
+        this.characters = characters;
+        return this;
+    }
+
+    public Player addCharacter(Character character) {
+        this.characters.add(character);
+        character.setPlayer(this);
+        return this;
+    }
+
+    public Player removeCharacter(Character character) {
+        this.characters.remove(character);
+        character.setPlayer(null);
+        return this;
+    }
+
+    public void setCharacters(Set<Character> characters) {
+        this.characters = characters;
     }
 
     public Set<PlayerMessage> getPlayerMessages() {
